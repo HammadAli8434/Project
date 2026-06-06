@@ -1,0 +1,395 @@
+/* Pure CSS icons — use with <span className="icon icon-name" aria-hidden="true" /> */
+
+.icon {
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Pencil / edit */
+.icon-edit {
+  width: 15px;
+  height: 15px;
+}
+
+.icon-edit::before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  width: 11px;
+  height: 2.5px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.icon-edit::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border: 2px solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+/* Trash / delete */
+.icon-trash {
+  width: 14px;
+  height: 15px;
+}
+
+.icon-trash::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.icon-trash::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  border: 2px solid currentColor;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+/* Sticky note */
+.icon-note {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-note::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  border-radius: 3px 3px 3px 0;
+  opacity: 0.9;
+}
+
+.icon-note::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 0 5px;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.15);
+}
+
+/* Plus */
+.icon-plus {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-plus::before,
+.icon-plus::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.icon-plus::before {
+  top: 50%;
+  left: 1px;
+  right: 1px;
+  height: 2.5px;
+  transform: translateY(-50%);
+}
+
+.icon-plus::after {
+  left: 50%;
+  top: 1px;
+  bottom: 1px;
+  width: 2.5px;
+  transform: translateX(-50%);
+}
+
+/* Save / check */
+.icon-save {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-save::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 5px;
+  height: 9px;
+  border: 2.5px solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+/* Close / cancel */
+.icon-close {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-close::before,
+.icon-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  right: 1px;
+  height: 2.5px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.icon-close::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.icon-close::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Calendar */
+.icon-calendar {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-calendar::before {
+  content: '';
+  position: absolute;
+  inset: 2px 0 0;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+.icon-calendar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3px;
+  right: 3px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 1px 1px 0 0;
+}
+
+/* Empty inbox */
+.icon-empty {
+  width: 40px;
+  height: 36px;
+}
+
+.icon-empty::before {
+  content: '';
+  position: absolute;
+  inset: 8px 4px 0;
+  border: 3px solid currentColor;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.icon-empty::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 10px;
+  border: 3px solid currentColor;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  opacity: 0.5;
+}
+
+/* Toolbar: bold */
+.icon-bold {
+  width: 12px;
+  height: 14px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 14px;
+  text-align: center;
+  color: currentColor;
+}
+
+.icon-bold::before {
+  content: 'B';
+}
+
+/* Italic */
+.icon-italic {
+  width: 12px;
+  height: 14px;
+}
+
+.icon-italic::before {
+  content: 'I';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 14px;
+}
+
+/* Strikethrough */
+.icon-strike {
+  width: 12px;
+  height: 14px;
+}
+
+.icon-strike::before {
+  content: 'S';
+  font-size: 13px;
+  line-height: 14px;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+/* Heading */
+.icon-heading {
+  width: 12px;
+  height: 14px;
+}
+
+.icon-heading::before {
+  content: 'H';
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 14px;
+}
+
+/* Bullet list */
+.icon-list-bullet {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-list-bullet::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  width: 3px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 currentColor, 0 8px 0 currentColor;
+}
+
+.icon-list-bullet::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 7px;
+  height: 1.5px;
+  background: currentColor;
+  box-shadow: 0 4px 0 currentColor, 0 8px 0 currentColor;
+}
+
+/* Numbered list */
+.icon-list-number {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-list-number::before {
+  content: '1.';
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+/* Quote */
+.icon-quote {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-quote::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  width: 5px;
+  height: 5px;
+  border-left: 3px solid currentColor;
+  border-top: 3px solid currentColor;
+  border-radius: 2px 0 0 0;
+}
+
+.icon-quote::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  bottom: 1px;
+  width: 5px;
+  height: 5px;
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  border-radius: 0 0 2px 0;
+}
+
+/* Undo */
+.icon-undo {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-undo::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border: 2.5px solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 50% 0 0 0;
+  transform: rotate(-45deg);
+}
+
+/* Redo */
+.icon-redo {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-redo::before {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border: 2.5px solid currentColor;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 50% 0 0;
+  transform: rotate(45deg);
+}

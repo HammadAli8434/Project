@@ -1,0 +1,193 @@
+.note-card {
+  --card-accent: var(--color-indigo);
+  --card-accent-light: var(--color-indigo-light);
+
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.35rem 1.15rem;
+  box-shadow: var(--shadow-card);
+  border: 2px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.note-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent);
+}
+
+.note-card--accent-0 { --card-accent: var(--color-indigo); --card-accent-light: var(--color-indigo-light); }
+.note-card--accent-1 { --card-accent: var(--color-pink); --card-accent-light: var(--color-pink-light); }
+.note-card--accent-2 { --card-accent: var(--color-teal); --card-accent-light: var(--color-teal-light); }
+.note-card--accent-3 { --card-accent: var(--color-orange); --card-accent-light: var(--color-orange-light); }
+.note-card--accent-4 { --card-accent: var(--color-purple); --card-accent-light: var(--color-purple-light); }
+.note-card--accent-5 { --card-accent: var(--color-amber); --card-accent-light: var(--color-amber-light); }
+
+.note-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-accent-light);
+  transform: translateY(-4px);
+}
+
+.note-card--editing {
+  border-color: var(--card-accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--card-accent) 20%, transparent), var(--shadow-md);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.note-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  word-break: break-word;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.note-card-untitled {
+  color: var(--text-muted);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.note-card-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: var(--bg-muted);
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-icon:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.btn-icon:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-edit {
+  color: var(--color-indigo);
+  border-color: var(--color-indigo-light);
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: var(--color-indigo-light);
+  border-color: var(--color-indigo);
+  box-shadow: 0 4px 12px rgba(55, 48, 163, 0.3);
+}
+
+.btn-delete {
+  color: var(--color-rose);
+  border-color: var(--color-rose-light);
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: var(--color-rose-light);
+  border-color: var(--color-rose);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+.note-card-body {
+  flex: 1;
+  padding: 0.75rem 0.85rem;
+  background: linear-gradient(135deg, var(--bg-muted) 0%, var(--bg-subtle) 100%);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.note-card-content {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  word-break: break-word;
+  line-height: 1.65;
+}
+
+.note-card-content:not(.rich-text) {
+  white-space: pre-wrap;
+}
+
+.note-card-content.rich-text p {
+  margin: 0 0 0.45rem;
+}
+
+.note-card-content.rich-text p:last-child {
+  margin-bottom: 0;
+}
+
+.note-card-content.rich-text h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+  color: var(--text-primary);
+}
+
+.note-card-content.rich-text ul,
+.note-card-content.rich-text ol {
+  margin: 0 0 0.45rem;
+  padding-left: 1.35rem;
+}
+
+.note-card-content.rich-text blockquote {
+  margin: 0 0 0.45rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--card-accent);
+  background: var(--card-accent-light);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-secondary);
+}
+
+.note-card-content.rich-text strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.note-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.note-card-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.note-card-date .icon-calendar {
+  color: var(--card-accent);
+  opacity: 0.85;
+}

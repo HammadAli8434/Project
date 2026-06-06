@@ -1,0 +1,62 @@
+.app-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.app-user-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.app-user-greeting {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.app-user-greeting strong {
+  color: var(--color-indigo-dark);
+}
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-rose-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface-elevated);
+  color: var(--color-rose);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.btn-logout:hover {
+  background: var(--color-rose-light);
+  border-color: var(--color-rose);
+  transform: translateY(-1px);
+}
+
+.btn-logout .icon-close {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 520px) {
+  .app-header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-user-bar {
+    align-items: center;
+    width: 100%;
+  }
+}

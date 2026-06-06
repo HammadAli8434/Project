@@ -1,0 +1,158 @@
+@import './icons.css';
+
+:root {
+  --color-indigo: #4f46e5;
+  --color-indigo-dark: #3730a3;
+  --color-indigo-light: #c7d2fe;
+  --color-pink: #db2777;
+  --color-pink-light: #f9a8d4;
+  --color-teal: #0d9488;
+  --color-teal-light: #99f6e4;
+  --color-orange: #ea580c;
+  --color-orange-light: #fdba74;
+  --color-purple: #9333ea;
+  --color-purple-light: #d8b4fe;
+  --color-amber: #d97706;
+  --color-amber-light: #fcd34d;
+  --color-rose: #e11d48;
+  --color-rose-light: #fda4af;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --surface: #f8fafc;
+  --surface-elevated: #ffffff;
+  --surface-glass: rgba(241, 245, 249, 0.9);
+
+  --border-light: #cbd5e1;
+  --border-medium: #94a3b8;
+  --bg-subtle: #e2e8f0;
+  --bg-muted: #f1f5f9;
+
+  --shadow-sm: 0 2px 8px rgba(30, 27, 75, 0.12);
+  --shadow-md: 0 8px 24px rgba(30, 27, 75, 0.16);
+  --shadow-lg: 0 16px 48px rgba(30, 27, 75, 0.2);
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.12);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --accent-0: var(--color-indigo);
+  --accent-1: var(--color-pink);
+  --accent-2: var(--color-teal);
+  --accent-3: var(--color-orange);
+  --accent-4: var(--color-purple);
+  --accent-5: var(--color-amber);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(
+    145deg,
+    #d5dcf0 0%,
+    #e5d0e8 35%,
+    #c5e8e0 65%,
+    #edd5c0 100%
+  );
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::before {
+  width: 420px;
+  height: 420px;
+  background: rgba(79, 70, 229, 0.28);
+  top: -120px;
+  right: -80px;
+}
+
+body::after {
+  width: 360px;
+  height: 360px;
+  background: rgba(219, 39, 119, 0.24);
+  bottom: -100px;
+  left: -60px;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+.error-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.error-fallback h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.error-fallback p {
+  color: var(--text-secondary);
+  max-width: 360px;
+}
+
+.error-fallback-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--color-rose-light);
+  border: 2px solid var(--color-rose);
+  color: var(--color-rose);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.error-fallback-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,82 @@
+.note-list {
+  padding: 0 0.25rem;
+}
+
+.note-list-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.note-list-heading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-orange-light), var(--color-amber-light));
+  color: var(--color-orange);
+  border: 2px solid rgba(234, 88, 12, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+
+.note-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.2rem 0.65rem;
+  margin-left: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-indigo-dark);
+  background: var(--color-indigo-light);
+  border-radius: 999px;
+  border: 2px solid rgba(79, 70, 229, 0.35);
+}
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  background: var(--surface-glass);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  border: 2px dashed rgba(79, 70, 229, 0.45);
+  box-shadow: var(--shadow-sm);
+}
+
+.note-list-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-indigo-light), var(--color-pink-light));
+  color: var(--color-indigo);
+  border: 2px solid rgba(79, 70, 229, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.note-list-empty p {
+  font-size: 1.05rem;
+  max-width: 320px;
+  line-height: 1.7;
+}

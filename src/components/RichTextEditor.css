@@ -1,0 +1,116 @@
+.rich-text-editor {
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-muted);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rich-text-editor:focus-within {
+  border-color: var(--color-indigo);
+  background: var(--surface-elevated);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
+}
+
+.rte-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  background: linear-gradient(135deg, var(--bg-muted), var(--color-indigo-light));
+  border-bottom: 2px solid var(--border-light);
+}
+
+.rte-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.15rem;
+  height: 2.15rem;
+  padding: 0 0.45rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: var(--surface-elevated);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.1);
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.12s, box-shadow 0.15s;
+}
+
+.rte-btn:hover {
+  background: var(--color-indigo-light);
+  color: var(--color-indigo-dark);
+  border-color: rgba(79, 70, 229, 0.4);
+  transform: translateY(-1px);
+}
+
+.rte-btn--active {
+  background: linear-gradient(135deg, var(--color-indigo), var(--color-purple));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(55, 48, 163, 0.4);
+}
+
+.rte-btn--active:hover {
+  background: linear-gradient(135deg, var(--color-indigo-dark), #7e22ce);
+  color: #fff;
+}
+
+.rte-divider {
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(180deg, transparent, var(--border-medium), transparent);
+  margin: 0 0.15rem;
+}
+
+.rte-content {
+  min-height: 150px;
+  padding: 1rem 1.15rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  outline: none;
+  line-height: 1.65;
+}
+
+.rte-content p {
+  margin: 0 0 0.55rem;
+}
+
+.rte-content p:last-child {
+  margin-bottom: 0;
+}
+
+.rte-content h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.55rem;
+  color: var(--text-primary);
+}
+
+.rte-content ul,
+.rte-content ol {
+  margin: 0 0 0.55rem;
+  padding-left: 1.5rem;
+}
+
+.rte-content blockquote {
+  margin: 0 0 0.55rem;
+  padding: 0.6rem 0.85rem;
+  border-left: 4px solid var(--color-teal);
+  background: var(--color-teal-light);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-secondary);
+}
+
+.rte-content:empty::before {
+  content: attr(data-placeholder);
+  color: var(--text-muted);
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+.ProseMirror-focused {
+  outline: none;
+}
